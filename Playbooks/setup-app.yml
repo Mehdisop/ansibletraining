@@ -7,5 +7,9 @@
       - name: upload app file
         copy:
           src: ../index.php
-          dest: /var/wwwhtml
+          dest: /var/www/html
           mode: 0755
+      - name: supprimer le mauvais doc
+        file:
+          state: absent
+          path: "/var/wwwhtml"
