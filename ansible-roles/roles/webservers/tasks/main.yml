@@ -1,2 +1,21 @@
 ---
 # tasks file for roles/webservers
+
+- name: upload app file
+  copy:
+   src: ../files/index.php
+   dest: "{{path_to_app}}"
+   mode: 0755
+
+- name: create simple info page
+  copy: 
+    dest: "{{path_to_app}}/info.php"
+    content: "<h1> info about our webserver {{ansible_hostname}}</h1> "
+      
+- name: See directory contents
+  command: ls -la {{ path_to_app}}
+  register: dir_contents
+
+- name: Debug directory contents
+  debug:
+    msg: "{{dir_contents}}"
