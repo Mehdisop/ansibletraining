@@ -3,18 +3,19 @@
 ---
   - hosts: webservers
     become: true
+
+    vars: 
+      path_to_app: "/var/www/html "
+
     tasks:
       - name: upload app file
         copy:
           src: ../index.php
-          dest: /var/www/html
+          dest: {{path_to_app}}
           mode: 0755
 
       - name: create simple info page
         copy: 
-          dest: /var/www/html/info.php
+          dest: "{{path_to_app}}/info.php"
           content: "<h1> info about our webserver {{ansible_hostname}}</h1> "
-      - name: supprimer le mauvais doc
-        file:
-          state: absent
-          path: "/var/wwwhtml"
+    
