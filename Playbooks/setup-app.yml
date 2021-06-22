@@ -11,7 +11,7 @@
       - name: upload app file
         copy:
           src: ../index.php
-          dest: {{path_to_app}}
+          dest: "{{path_to_app}}"
           mode: 0755
 
       - name: create simple info page
