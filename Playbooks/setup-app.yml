@@ -9,6 +9,11 @@
           src: ../index.php
           dest: /var/www/html
           mode: 0755
+
+      - name: create simple info page
+        copy: 
+          dest: /var/www/html/info.php
+          content: "<h1> info about our webserver {{ansible_hostname}}</h1> "
       - name: supprimer le mauvais doc
         file:
           state: absent
