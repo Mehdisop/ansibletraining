@@ -1,10 +1,10 @@
 ---
-- hosts: all
+- hosts: local
   gather_facts: False
   tasks:
     - name: check if github.com:22 is accessible
       wait_for:
-        host: github.com
+        host: webserververs
         port: 22
         state: started
         delay: 0
