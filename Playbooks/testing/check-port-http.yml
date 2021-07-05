@@ -4,7 +4,7 @@
   tasks:
     - name: check if webservers:443 are accessible
       wait_for:
-        port: 443
+        port: 80
         state: started
         delay: 0
         timeout: 3
