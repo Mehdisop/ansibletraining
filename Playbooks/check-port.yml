@@ -2,7 +2,7 @@
 - hosts: local
   gather_facts: False
   tasks:
-    - name: check if github.com:22 is accessible
+    - name: check if webservers:22 apre accessible
       wait_for:
         host: webserververs
         port: 22
