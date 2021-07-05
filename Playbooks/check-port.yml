@@ -1,12 +1,11 @@
--name: Check all port numbers are accessible from the current host
-  wait_for:
-    host: all
-    port: "{{ item }}"
-    state: started         # Port should be open
-    delay: 0               # No wait before first check (sec)
-    timeout: 3             # Stop checking after timeout (sec)
-  ignore_errors: yes
-  with_items:
-    - 443
-    - 80
-    - 80443
+---
+- hosts: all
+  gather_facts: False
+  tasks:
+    - name: check if github.com:22 is accessible
+      wait_for:
+        host: github.com
+        port: 22
+        state: started
+        delay: 0
+        timeout: 3
