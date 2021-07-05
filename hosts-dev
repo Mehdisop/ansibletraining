@@ -1,11 +1,13 @@
 # hosts-dev 
 
 [webservers]
-app1 ansible_host=192.168.3.178
-app2 ansible_host=192.168.3.129
-
-[loadbalancers]
-lb1 ansible_host=192.168.3.172
+app1 ansible_host=192.168.3.216
+app2 ansible_host=192.168.3.207
 
 [local]
 control ansible_connection=local
+
+[all:vars]
+ansible_connection=ssh
+ansible_user=vagrant
+ansible_ssh_pass=vagrant
