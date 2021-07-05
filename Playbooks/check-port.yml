@@ -4,7 +4,7 @@
   tasks:
     - name: check if webservers:22 apre accessible
       wait_for:
-        host: "{{webservers}}"
+        host: app1
         port: 22
         state: started
         delay: 0
