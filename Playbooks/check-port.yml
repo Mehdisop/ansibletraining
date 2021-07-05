@@ -1,10 +1,9 @@
 ---
-- hosts: local
+- hosts: webservers
   gather_facts: False
   tasks:
     - name: check if webservers:22 are accessible
       wait_for:
-        host: '{{ (webservers|default(ansible_host)) }}'
         port: 22
         state: started
         delay: 0
