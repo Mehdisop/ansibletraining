@@ -1,6 +1,6 @@
 
 ---
-  - hosts: webservers:loadbalancers
+  - hosts: webservers
     become: true
     tasks:
       - name: Check status of apache
