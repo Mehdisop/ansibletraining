@@ -9,5 +9,5 @@ control ansible_connection=local
 
 [all:vars]
 ansible_connection=ssh
-ansible_user=vagrant
-ansible_ssh_pass=vagrant
+ansible_user=user
+ansible_ssh_pass=user
