@@ -1,4 +1,4 @@
-- name: Check all port numbers are accessible from the current host
+-name: Check all port numbers are accessible from the current host
   wait_for:
     host: all
     port: "{{ item }}"
