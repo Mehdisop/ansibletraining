@@ -4,7 +4,7 @@
   tasks:
     - name: check if webservers:22 apre accessible
       wait_for:
-        host: webserververs
+        host: webservers
         port: 22
         state: started
         delay: 0
