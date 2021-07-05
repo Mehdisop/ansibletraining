@@ -2,9 +2,9 @@
 - hosts: local
   gather_facts: False
   tasks:
-    - name: check if webservers:22 apre accessible
+    - name: check if webservers:22 are accessible
       wait_for:
-        host: 192.168.3.216
+        host: '{{ (ansible_ssh_host|default(ansible_host))|default(inventory_hostname) }}'
         port: 22
         state: started
         delay: 0
