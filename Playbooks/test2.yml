@@ -1,14 +1,14 @@
 ---
 
-- hosts: webservers
+- hosts: app2
 
   tasks:
     - name: Check global ports
       wait_for:
-        host: "{{ item.name }}"
+        host: app1
         port: "80"
         state: started         # Port should be open
         delay: 0               # No wait before first check (sec)
         timeout: 5             # Stop checking after timeout (sec)
       ignore_errors: yes
-      with_items: "{{ server_to_test }}"
+     # with_items: "{{ server_to_test }}"
