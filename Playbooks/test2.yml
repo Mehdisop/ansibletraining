@@ -1,6 +1,6 @@
 ---
 
-- hosts: app1
+- hosts: host1
 
   tasks:
     - name: Check global ports
