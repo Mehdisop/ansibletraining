@@ -5,10 +5,10 @@
   tasks:
     - name: Check global ports
       wait_for:
-        host: [webservers]
+        host: item
         port: "22"
         state: started         # Port should be open
         delay: 0               # No wait before first check (sec)
         timeout: 3             # Stop checking after timeout (sec)
       ignore_errors: yes
-     # with_items: "{{ server_to_test }}"
+      with_items: webservers
