@@ -11,4 +11,4 @@
         delay: 0               # No wait before first check (sec)
         timeout: 3             # Stop checking after timeout (sec)
       ignore_errors: yes
-      with_items: "{{ webservers }}"
+      with_items: "{{ hosts }}"
