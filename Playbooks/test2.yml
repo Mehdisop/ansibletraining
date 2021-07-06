@@ -1,6 +1,6 @@
 ---
 
-
+- hosts: local
 - name: Check global ports
   wait_for:
     host: "{{ item.ansible_host }}"
