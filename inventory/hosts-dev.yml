@@ -1,10 +1,13 @@
 ---
-hosts:
-  app1: 
-  app2:
-ansible_hosts:  
-    192.168.3.216
-    192.168.3.207
+webservers:
+  hosts:
+    host1:
+      ansible_host: 192.168.3.216
+      host_name: app1
+    host2:
+      ansible_host: 192.168.3.207
+      host_name: app2      
+
 #  vars:
  #   private_key_file: ../ssh/id_rsa
   #  host_key_checking: false
