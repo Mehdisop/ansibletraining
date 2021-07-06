@@ -1,6 +1,6 @@
 ---
 
-- hosts: "{{ host }}"
+- hosts: app1
 
   tasks:
     - name: Check global ports
