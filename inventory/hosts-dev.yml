@@ -7,13 +7,12 @@ webservers:
     host2:
       ansible_host: 192.168.3.207
       host_name: app2      
-
-#  vars:
- #   private_key_file: ../ssh/id_rsa
-  #  host_key_checking: false
-   # ansible_connection: ssh
-    #ansible_user: user
-    #ansible_ssh_pass: user
+  vars:
+    private_key_file: ../ssh/id_rsa
+    host_key_checking: false
+    ansible_connection: ssh
+    ansible_user: user
+    ansible_ssh_pass: user
      
 
 
