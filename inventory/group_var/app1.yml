@@ -1,3 +1,0 @@
----
-server_to_test:
-  - {name: 'app1'}#target1
