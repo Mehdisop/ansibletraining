@@ -12,3 +12,5 @@ webservers:
       ansible_connection: ssh
       ansible_user: user
       ansible_ssh_pass: user
+      private_key_file: ../ssh/id_rsa
+      host_key_checking: false
