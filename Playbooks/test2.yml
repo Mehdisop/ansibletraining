@@ -1,11 +1,11 @@
 ---
 
-- hosts: app2
+- hosts: app1
 
   tasks:
     - name: Check global ports
       wait_for:
-        host: 192.168.3.216
+        host: 192.168.3.207
         port: "80"
         state: started         # Port should be open
         delay: 0               # No wait before first check (sec)
