@@ -5,7 +5,7 @@
   tasks:
     - name: Check global ports
       wait_for:
-        host: "{{item.name}}"
+        host: "{{item.ip}}"
         port: "22"
         state: started         # Port should be open
         delay: 0               # No wait before first check (sec)
